@@ -1,2 +1,3 @@
-"# nlw-6-flutter - Flutter project"  git init git add README.md git commit -m "first commit" git branch -M main git remote add origin https://github.com/gabsgasps/nlw-6-flutter.git git push -u origin main
-"# nlw-6-flutter - Flutter project"  git init git add README.md git commit -m "first commit" git branch -M main git remote add origin https://github.com/gabsgasps/nlw-6-flutter.git git push -u origin main
+"# nlw-6-flutter - Flutter"
+
+App Criado na NLW - 6 da Rocketseat
