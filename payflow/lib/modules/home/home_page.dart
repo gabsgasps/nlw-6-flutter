@@ -16,7 +16,6 @@ class _HomePageState extends State<HomePage> {
   final pages = [
     Container(color: Colors.red),
     Container(color: Colors.blue),
-    Container(color: Colors.green),
   ];
 
   @override
@@ -71,29 +70,25 @@ class _HomePageState extends State<HomePage> {
                 color: AppColors.primary,
               ),
             ),
-            InkWell(
-              onTap: () {
-                controller.setPage(1);
-                setState(() {});
-              },
-              child: Container(
-                width: 56,
-                height: 56,
-                decoration: BoxDecoration(
-                    color: AppColors.primary,
-                    borderRadius: BorderRadius.circular(5)),
-                child: IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.add_box,
-                    color: AppColors.background,
-                  ),
+            Container(
+              width: 56,
+              height: 56,
+              decoration: BoxDecoration(
+                  color: AppColors.primary,
+                  borderRadius: BorderRadius.circular(5)),
+              child: IconButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/barcode_scanner');
+                },
+                icon: Icon(
+                  Icons.add_box,
+                  color: AppColors.background,
                 ),
               ),
             ),
             IconButton(
               onPressed: () {
-                controller.setPage(2);
+                controller.setPage(1);
                 setState(() {});
               },
               icon: Icon(
