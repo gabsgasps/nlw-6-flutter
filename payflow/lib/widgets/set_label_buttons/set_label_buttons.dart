@@ -11,13 +11,15 @@ class SetLabelButtons extends StatelessWidget {
   final VoidCallback secondaryOnPressed;
 
   final bool enablePrimaryColor;
+  final bool enableSecondaryColor;
   const SetLabelButtons(
       {Key? key,
       required this.primaryLabel,
       required this.primaryOnPressed,
       required this.secondaryLabel,
       required this.secondaryOnPressed,
-      this.enablePrimaryColor = false})
+      this.enablePrimaryColor = false,
+      this.enableSecondaryColor = false})
       : super(key: key);
 
   @override
@@ -38,6 +40,7 @@ class SetLabelButtons extends StatelessWidget {
           DividerVerticalWidget(),
           Expanded(
             child: LabelButton(
+              style: enableSecondaryColor ? TextStyles.buttonPrimary : null,
               label: secondaryLabel,
               onPressed: secondaryOnPressed,
             ),
